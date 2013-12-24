@@ -1,17 +1,24 @@
+#Settings Controller
 class Admin::SettingsController < ApplicationController
 
   before_filter :authenticate_user!
   before_filter :is_administratior?
-  
+
   before_action :set_setting, only:[:show, :edit, :update]
-  
+
+  # GET /admin/settings
+  # GET /admin/settings.json
   def show
-    
+
   end
-  
+
+  # GET /admin/settings/edit
+  # GET /admin/settings/edit.json
   def edit    
   end
 
+  # PUT /admin/settings
+  # PUT /admin/settings.json
   def update
     respond_to do |format|
       if @setting.update(mineral_params)
@@ -23,13 +30,13 @@ class Admin::SettingsController < ApplicationController
       end
     end
   end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_setting
       @setting = Setting.first
     end
-    
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def setting_params
       params.require(:setting).permit(:app_name, :app_description, :author)

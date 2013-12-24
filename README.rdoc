@@ -1,28 +1,16 @@
-== README
+= ANA ERP
+Experiment for an online ERP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+==Technology
+ANA ERP is built with
 
-Things you may want to cover:
+* {ruby 2.0.0}[https://www.ruby-lang.org/]
+* {rails 4.0}[http://rubyonrails.org/]
+* Foundation[http://foundation.zurb.com/]
+* Devise[https://github.com/plataformatec/devise]
+* {Simple form}[https://github.com/plataformatec/simple_form]
 
-* Ruby version
+==License
 
-* System dependencies
+MIT License. Copyright 2013 Gustavo Bazan. http://gustavobazan.com
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
