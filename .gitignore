@@ -1,0 +1,33 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+tmp/**/*
+
+#Idea
+.idea
+.idea/**/*
+
+
+#netbeans specific
+nbproject/*
+#!nbproject/project.properties
+#!nbproject/project.xml
+
+#general swap/backup files
+*.so
+*.log
+*.out
+*~
+*.swp
+*.DS_Store
+*.lock
+
+#ANA
+config/database.yml

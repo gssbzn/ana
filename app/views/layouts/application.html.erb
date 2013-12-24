@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : $app_name %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header class="row">
+       <%= render 'layouts/header' %>
+    </header>
+    
+    <main id="wrap" role="main">
+      <div class="off-canvas-wrap">
+        <div class="inner-wrap">          
+          <div class="left small-1">
+            <h2>
+              <a class="left-off-canvas-toggle" >
+                <span><i class="fi-list black-menu"></i></span>
+              </a>
+            </h2>
+          </div>
+          <%= render 'layouts/messages' %> 
+          <%= yield %>
+        </div>
+      </div>        
+    </main>
+    
+    <footer id="footer" class="">
+         <%= render 'layouts/footer' %>
+    </footer>    
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

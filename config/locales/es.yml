@@ -1,0 +1,25 @@
+es:
+  saving: "Guardando"
+  show: "Mostrar"
+  new: "Nuevo"
+  edit: "Editar"  
+  destroy: "Eliminar"
+  back: "Retroceder"
+  helpers:
+     submit:
+       create: "Crear %{model}"
+       update: "Actualizar %{model}"
+  search:
+    hint: "Busca Algo"
+    button: "Buscar"
+  session:
+    sign_in: "Iniciar Sesión"
+    logging_in: "Iniciando Sesión"
+    forgotten_password: "¿Olvidó su contraseña?"
+    send_reset_pass: "Enviar instrucciones para reinicio de la contraseña"
+    login: "Acceder"
+    logout: "Salir"
+    my_account: "Mi Cuenta"
+    cancel_account: "Cancelar mi cuenta"
+  unhappy: "¿Insatisfecho?"
+  settings: "Configuraciones"

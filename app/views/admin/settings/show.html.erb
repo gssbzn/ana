@@ -1,0 +1,47 @@
+<% if current_user.admin? %>
+  <%= render 'side_nav' %>
+<% end %>
+<div class = "row">
+  <h3>
+    <%= t(:settings) %>
+    <small>
+      <%= @setting.app_name %>
+    </small>
+  </h3>
+  <div class="panel">
+    <div class="row display">
+      <div class="small-3 columns">
+        <strong>
+          <%= t(:app_name, scope:'activerecord.attributes.setting') %>
+        </strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @setting.app_name %>
+      </div>
+    </div>
+    <div class="row display">
+      <div class="small-3 columns">
+        <strong>
+          <%= t(:app_description, scope:'activerecord.attributes.setting') %>
+        </strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @setting.app_description %>
+      </div>
+    </div>
+    <div class="row display">
+      <strong>
+        <div class="small-3 columns">
+          <%= t(:author, scope:'activerecord.attributes.setting') %>
+        </div>
+      </strong>
+      <div class="small-9 columns">
+        <%= @setting.author %>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+

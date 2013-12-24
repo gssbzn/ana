@@ -1,0 +1,16 @@
+<%= render 'side_nav' %>
+<div class ="small-6 large-4 colummn center row">
+  <h2><%= t(:new, scope:'actioncontroller.user') %> </h2>
+  <%= simple_form_for @user, :url => admin_users_path do |f| %>
+    <%= f.input :username, required: true, :autofocus => true %>
+    <%= f.input :email, as: "email", required: true, placeholder: t(:email, scope:'activerecord.hints.user') %>
+    <%= f.input :name %>
+    <%= f.input :lastname %>
+    <%= f.input :password, required: true, as:'password' %>     
+    <%= f.input :password_confirmation, required: true, as:'password' %>
+    
+    <%= f.button :submit, data: { disable_with: (t :saving) } %>
+  <% end %>  
+
+  <%= link_to t(:back), admin_users_path %>
+</div>

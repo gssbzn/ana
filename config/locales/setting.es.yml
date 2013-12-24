@@ -1,0 +1,21 @@
+#
+es:
+  activerecord:
+    models:
+      setting: "Preferencia"
+      settings: "Preferencias"
+    attributes:
+      setting:
+        app_name: "Nombre de la aplicación"
+        author: "Autor de la aplicación"
+        app_description: "Descripción"            
+    errors:
+      models:
+        setting:
+          attributes:
+            app_name:
+              blank: "No puede estar vacio"
+          setings_limit: "No puedes tener pas preferencias"
+  actioncontroller:
+    setting:
+      edit: "Actualice las preferencias"

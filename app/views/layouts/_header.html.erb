@@ -1,0 +1,56 @@
+<div class="fixed">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">      
+      <li class="name">
+        <h1><%= link_to $app_name, root_path %></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="#"><span>Menu</span></a>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">        
+        <li class="has-form">
+          <div class="row collapse">
+            <div class="large-8 small-9 columns">
+              <%= text_field_tag(:q, nil, placeholder: t(:hint, scope:'search')) %>             
+            </div>
+            <div class="large-4 small-3 columns">
+              <%= link_to t(:button, scope:'search'),"#", class:"button expand" %>
+            </div>
+          </div>
+        </li>
+        <li class="divider"></li>
+        <%= render 'layouts/login' %>
+      </ul>
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li class="has-dropdown">          
+          <a href="#">Work in</a>
+          <ul class="dropdown">
+            <li>
+              <a href="#">Sales</a>
+            </li>
+            <li>
+              <a href="#">Production</a>
+            </li>
+            <li>
+              <a href="#">Accountings</a>
+            </li>
+          </ul>
+        </li>
+        <% if user_signed_in? && current_user.admin? %>
+          <li class="has-dropdown">          
+            <a href="#">Admin</a>
+            <ul class="dropdown">
+              <li>
+                <%= link_to t(:users,scope:'activerecord.models'), admin_users_path %>
+              </li>              
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+  </nav>
+</div>
