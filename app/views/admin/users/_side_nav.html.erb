@@ -1,6 +1,6 @@
 <aside class="left-off-canvas-menu">
   <ul class="off-canvas-list">
-    <li><label><%= t(:users, scope:'activerecord.models') %></label></li>        
+    <li><label><%= t(:user, scope:'activerecord.models', count:0) %></label></li>        
     <li><%= link_to t(:new, scope:'actioncontroller.user'), new_admin_user_path %></li>
   </ul>      
 </aside>

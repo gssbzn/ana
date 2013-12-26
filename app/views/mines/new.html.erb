@@ -1,0 +1,9 @@
+<%= render 'productions/side_nav' %>
+<div class="row">
+  <h2><%= t(:new, scope:'actioncontroller.mine') %></h2>
+
+  <%= render 'form' %>
+
+  <%= link_to t(:back), mines_path %>
+</div>
+

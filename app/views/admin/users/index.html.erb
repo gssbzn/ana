@@ -1,7 +1,7 @@
 <%= render 'side_nav' %>
 
 <div class = "row">
-  <h3><%= t(:users, scope:'activerecord.models') %></h3>
+  <h3><%= t(:user, scope:'activerecord.models', count:@users.size) %></h3>
   <table>
     <thead>
       <tr>

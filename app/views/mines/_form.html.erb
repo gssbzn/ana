@@ -1,0 +1,37 @@
+<%= simple_form_for(@mine) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <fieldset>
+      <%= content_tag :legend, t(:location) %>
+      <div class="row">
+        <div class="small-6 columns">
+          <%= f.input :latitude %>
+        </div>
+        <div class="small-6 columns">
+          <%= f.input :longitude %>
+        </div>
+      </div>
+    </fieldset>
+    
+    <fieldset>
+      <%= content_tag :legend, t(:capacity) %>
+      <div class="row">
+        <div class="small-6 columns">
+          <%= f.input :expected_capacity %>
+        </div>
+        <div class="small-6 columns">
+          <%= f.input :real_capacity, disabled:true %>
+        </div>
+      </div>
+    </fieldset>
+      
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

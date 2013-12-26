@@ -1,0 +1,8 @@
+
+<aside class="left-off-canvas-menu">
+  <ul class="off-canvas-list">    
+    <li><label><%= t(:production) %></label></li>        
+    <li><%= link_to t(:mine, scope:'activerecord.models', count: 0), mines_path %></li>
+    <li><%= link_to t(:new, scope:'actioncontroller.mine'), new_mine_path %></li>
+  </ul>      
+</aside>

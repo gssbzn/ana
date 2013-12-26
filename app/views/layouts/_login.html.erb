@@ -5,12 +5,7 @@
     <ul class="dropdown">
       <li>
         <%= link_to(t(:my_account, scope:'session'), edit_user_registration_path) %>        
-      </li>
-      <% if current_user.admin? %>
-        <li>
-          <%= link_to t(:settings), admin_settings_path %>          
-        </li>
-      <% end %>
+      </li>      
       <li>
         <%= link_to(t(:logout,scope:'session'), destroy_user_session_path, :method => :delete) %>
       </li>

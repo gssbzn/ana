@@ -1,0 +1,32 @@
+es:
+  activerecord:
+    models:
+      mine:
+        zero: "Minas"
+        one: "Mina"
+        other: "%{count} Minas"
+    attributes:
+      mine:
+        name: "Nombre"
+        description: "Detalles"
+        latitude: "Latitud"
+        longitude: "Longitud"
+        expected_capacity: "Capacidad Esperada"
+        real_capacity: "Capacidad Real"
+    errors:
+      models:
+        mine:
+          attributes:
+            name:
+              blank: "no puede estar en blanco"
+            latitude: 
+              blank: "no puede estar en blanco"
+              not_a_number: "debe ser un numero"
+            longitude: 
+              blank: "no puede estar en blanco"
+              not_a_number: "debe ser un numero"
+  actioncontroller:
+    mine:
+      new: "Nueva Mina"
+      created: "Mina Creado"
+      edit: "Editar mina"

@@ -1,7 +1,11 @@
 
 <aside class="left-off-canvas-menu">
-  <ul class="off-canvas-list">
-    <li><label>Sales</label></li>        
-    <li><a href="#">New Sale</a></li>
+  <ul class="off-canvas-list">    
+    <li><label><%= t(:welcome) %></label></li>        
+    <% if user_signed_in? %>
+      <li><%= t(:something) %></li>
+    <% else %>
+      <li></li>
+    <% end %>
   </ul>      
 </aside>

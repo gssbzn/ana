@@ -1,4 +1,8 @@
 AnaErp::Application.routes.draw do  
+  
+  get "production/", to: 'productions#index'
+  resources :mines
+
   devise_for :users, :controllers => { :registrations => 'admin/users'}
   
   devise_scope :user do

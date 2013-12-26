@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  latitude: 1.5
+  longitude: 1.5
+  expected_capacity: 9.99
+  real_capacity: 9.99
+
+two:
+  name: MyString
+  description: MyText
+  latitude: 1.5
+  longitude: 1.5
+  expected_capacity: 9.99
+  real_capacity: 9.99

@@ -4,8 +4,8 @@ Experiment for an online ERP
 ==Technology
 ANA ERP is built with
 
-* {ruby 2.0.0}[https://www.ruby-lang.org/]
-* {rails 4.0}[http://rubyonrails.org/]
+* {Ruby 2.0.0}[https://www.ruby-lang.org/]
+* {Rails 4.0}[http://rubyonrails.org/]
 * Foundation[http://foundation.zurb.com/]
 * Devise[https://github.com/plataformatec/devise]
 * {Simple form}[https://github.com/plataformatec/simple_form]

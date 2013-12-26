@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131224160633) do
+ActiveRecord::Schema.define(version: 20131225165348) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "mines", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.decimal  "expected_capacity"
+    t.decimal  "real_capacity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mines", ["name"], name: "index_mines_on_name", unique: true, using: :btree
 
   create_table "roles", force: true do |t|
     t.string   "name"

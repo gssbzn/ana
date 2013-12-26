@@ -2,8 +2,10 @@
 es:
   activerecord:
     models:
-      setting: "Preferencia"
-      settings: "Preferencias"
+      setting:
+        zero: "Preferencias"
+        one: "Preferencia"
+        other: "%{count} Preferencias"
     attributes:
       setting:
         app_name: "Nombre de la aplicación"

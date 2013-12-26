@@ -2,8 +2,10 @@
 es:
   activerecord:
     models:
-      user: "Usuario"
-      users: "Usuarios"
+      user:
+        zero: "Usuarios"
+        one: "Usuario"
+        other: "%{count} Usuarios"
     attributes:
       user:
         login: "Usuario"

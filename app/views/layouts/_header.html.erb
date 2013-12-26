@@ -17,7 +17,7 @@
               <%= text_field_tag(:q, nil, placeholder: t(:hint, scope:'search')) %>             
             </div>
             <div class="large-4 small-3 columns">
-              <%= link_to t(:button, scope:'search'),"#", class:"button expand" %>
+              <%= link_to t(:button, scope:'search'),'#', class:"button expand" %>
             </div>
           </div>
         </li>
@@ -26,29 +26,35 @@
       </ul>
       <!-- Left Nav Section -->
       <ul class="left">
-        <li class="has-dropdown">          
-          <a href="#">Work in</a>
-          <ul class="dropdown">
-            <li>
-              <a href="#">Sales</a>
-            </li>
-            <li>
-              <a href="#">Production</a>
-            </li>
-            <li>
-              <a href="#">Accountings</a>
-            </li>
-          </ul>
-        </li>
-        <% if user_signed_in? && current_user.admin? %>
+        <% if user_signed_in? %>
           <li class="has-dropdown">          
-            <a href="#">Admin</a>
+            <%= link_to t(:work_in), '#' %>
             <ul class="dropdown">
               <li>
-                <%= link_to t(:users,scope:'activerecord.models'), admin_users_path %>
-              </li>              
+                <%= link_to t(:production), production_path %>
+              </li>
+              <li>
+                <%= link_to t(:sales), '#' %>
+              </li>            
+              <li>
+                <%= link_to t(:accountings), '#' %>
+              </li>
             </ul>
           </li>
+        
+          <% if current_user.admin? %>
+            <li class="has-dropdown">          
+              <a href="#">Admin</a>
+              <ul class="dropdown">
+                <li>
+                  <%= link_to t(:users,scope:'activerecord.models'), admin_users_path %>
+                </li>   
+                <li>
+                  <%= link_to t(:settings), admin_settings_path %>          
+                </li>
+              </ul>
+            </li>
+          <% end %>
         <% end %>
       </ul>
     </section>

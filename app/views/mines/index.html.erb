@@ -1,0 +1,41 @@
+<%= render 'productions/side_nav' %>
+<div class="row">
+  <%= content_tag :h1, t(:mine,count:0, scope:'activerecord.models') %>
+
+  <table>
+    <thead>
+      <tr>
+        <th><%= t(:name, scope:'activerecord.attributes.mine') %></th>
+        <th><%= t(:description, scope:'activerecord.attributes.mine') %></th>
+        <th><%= t(:latitude, scope:'activerecord.attributes.mine') %></th>
+        <th><%= t(:longitude, scope:'activerecord.attributes.mine') %></th>
+        <th><%= t(:expected_capacity, scope:'activerecord.attributes.mine') %></th>
+        <th><%= t(:real_capacity, scope:'activerecord.attributes.mine') %></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @mines.each do |mine| %>
+        <tr>
+          <td><%= mine.name %></td>
+          <td><%= mine.description %></td>
+          <td><%= mine.latitude %></td>
+          <td><%= mine.longitude %></td>
+          <td><%= mine.expected_capacity %></td>
+          <td><%= mine.real_capacity %></td>
+          <td><%= link_to t(:show), mine %></td>
+          <td><%= link_to t(:edit), edit_mine_path(mine) %></td>
+          <td><%= link_to t(:destroy), mine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to t(:new, scope:'actioncontroller.mine'), new_mine_path %>
+</div>
+
