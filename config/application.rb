@@ -21,5 +21,6 @@ module AnaErp
     config.i18n.enforce_available_locales = true
     config.i18n.default_locale = :es
     
+    config.assets.initialize_on_precompile = false
   end
 end
