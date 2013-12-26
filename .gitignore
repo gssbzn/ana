@@ -14,13 +14,15 @@ tmp/**/*
 .idea
 .idea/**/*
 
+# Ignore Doc
+doc/*
 
-#netbeans specific
+# Netbeans specific
 nbproject/*
 #!nbproject/project.properties
 #!nbproject/project.xml
 
-#general swap/backup files
+# General swap/backup files
 *.so
 *.log
 *.out
