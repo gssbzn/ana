@@ -48,6 +48,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'cancan'
 gem 'rolify'
-gem 'i18n-inflector-rails'
 
 gem 'pg'
+
+#heroku
+gem 'rails_12factor', group: :production
