@@ -47,7 +47,7 @@
               <a href="#">Admin</a>
               <ul class="dropdown">
                 <li>
-                  <%= link_to t(:users,count:0,scope:'activerecord.model'), admin_users_path %>
+                  <%= link_to t(:user, scope:'activerecord.models', count:0), admin_users_path %>
                 </li>   
                 <li>
                   <%= link_to t(:settings), admin_settings_path %>          

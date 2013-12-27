@@ -1,5 +1,5 @@
 begin
-  if ActiveRecord::Base.conected? && Setting.table_exists?
+  if Setting.table_exists?
     setting = Setting.first
     if setting
       $app_name = setting.app_name
