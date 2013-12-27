@@ -1,11 +1,13 @@
 
 <aside class="left-off-canvas-menu">
   <ul class="off-canvas-list">    
-    <li><label><%= t(:welcome) %></label></li>        
+    <li><%= content_tag :label, t(:welcome) %></li>        
     <% if user_signed_in? %>
-      <li><%= t(:something) %></li>
+      <%= content_tag :li, t(:something) %>
     <% else %>
-      <li></li>
+      <li>
+        <%= link_to(t(:login, scope:'session'), new_user_session_path) %>
+      </li>      
     <% end %>
   </ul>      
 </aside>
