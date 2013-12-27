@@ -28,5 +28,6 @@ es:
   actioncontroller:
     mine:
       new: "Nueva Mina"
-      created: "Mina Creado"
+      created: "Mina creada correctamente."
       edit: "Editar mina"
+      updated: "Mina actualizada correctamente."

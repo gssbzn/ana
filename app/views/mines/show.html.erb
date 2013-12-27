@@ -1,34 +1,38 @@
-<p id="notice"><%= notice %></p>
+<%= render 'productions/side_nav' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @mine.name %>
-</p>
+<div class="small-8 colummn center row">
+  <h2><%= @mine.name %></h2>
+  
+  <div class="row display">
+    <p>      
+      <%= @mine.description %>
+    </p>    
+  </div>
+  <div class="row display">
+    <fieldset>
+      <%= content_tag :legend, t(:location) %>
+      <%= @mine.latitude %>&nbsp;,&nbsp;<%= @mine.longitude %>
+    </fieldset>
+  </div>
+  
+  <div class="row display">
+    <fieldset>
+      <%= content_tag :legend, t(:capacity) %>
+      <div class="row">
+        <div class="small-4 columns">
+          <strong><%= t(:expected_capacity, scope:'activerecord.attributes.mine') %>:</strong>
+          <%= @mine.expected_capacity %>
+        </div>
+        <div class="small-4 columns">
+          <strong><%= t(:real_capacity, scope:'activerecord.attributes.mine') %>:</strong>
+          <%= @mine.real_capacity %>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  
+  <%= link_to t(:edit), edit_mine_path(@mine) %> |
+  <%= link_to t(:back), mines_path %>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @mine.description %>
-</p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @mine.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @mine.longitude %>
-</p>
-
-<p>
-  <strong>Expected capacity:</strong>
-  <%= @mine.expected_capacity %>
-</p>
-
-<p>
-  <strong>Real capacity:</strong>
-  <%= @mine.real_capacity %>
-</p>
-
-<%= link_to 'Edit', edit_mine_path(@mine) %> |
-<%= link_to 'Back', mines_path %>

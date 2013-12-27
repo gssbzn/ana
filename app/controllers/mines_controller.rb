@@ -29,7 +29,7 @@ class MinesController < ApplicationController
 
     respond_to do |format|
       if @mine.save
-        format.html { redirect_to @mine, notice: 'Mine was successfully created.' }
+        format.html { redirect_to @mine, notice: t(:created, scope:'actioncontroller.mine') }
         format.json { render action: 'show', status: :created, location: @mine }
       else
         format.html { render action: 'new' }
@@ -43,7 +43,7 @@ class MinesController < ApplicationController
   def update
     respond_to do |format|
       if @mine.update(mine_params)
-        format.html { redirect_to @mine, notice: 'Mine was successfully updated.' }
+        format.html { redirect_to @mine, notice: t(:updated, scope:'actioncontroller.mine') }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
