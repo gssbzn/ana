@@ -16,10 +16,8 @@
     <header class="row">
        <%= render 'layouts/header' %>
     </header>
-    
-    <main id="wrap" role="main">
-      <div class="off-canvas-wrap">
-        <div class="inner-wrap">          
+     <div class="off-canvas-wrap">
+       <div class="inner-wrap">                       
           <div class="left small-1">
             <h2>
               <a class="left-off-canvas-toggle" >
@@ -27,15 +25,16 @@
               </a>
             </h2>
           </div>
-          <%= render 'layouts/messages' %> 
+        <main id="wrapper" role="main">
+          <%= render 'layouts/messages' %>
           <%= yield %>
-        </div>
+        </main>       
       </div>        
-    </main>
-    
+    </div>
     <footer id="footer" class="">
-         <%= render 'layouts/footer' %>
-    </footer>    
+      <%= render 'layouts/footer' %>
+    </footer> 
+    
     <%= javascript_include_tag "application" %>
   </body>
 </html>
